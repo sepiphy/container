@@ -35,11 +35,4 @@ abstract class ServiceProvider
     {
         //
     }
-
-    public function when(): array
-    {
-        return [
-            //
-        ];
-    }
 }
