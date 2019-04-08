@@ -26,13 +26,38 @@ abstract class ServiceProvider
         $this->container = $container;
     }
 
+    /**
+     * @return void
+     */
     public function register(): void
     {
         //
     }
 
+    /**
+     * @return void
+     */
     public function boot(): void
     {
         //
+    }
+
+    /**
+     * @return Container
+     */
+    public function getContainer(): Container
+    {
+        return $this->container;
+    }
+
+    /**
+     * @param Container $container
+     * @return self
+     */
+    public function setContainer(Container $container): self
+    {
+        $this->container = $container;
+
+        return self;
     }
 }
