@@ -1,9 +1,9 @@
 ## About
 
-The `sepiphy/container` package is a component of `sepiphy/phptools` package.
+The `sepiphy/container` project is a component of `sepiphy/phptools` project.
 
 Please visit [sepiphy/phptools](../../README.md) for more information and documentation!
 
 ## License
 
-The `sepiphy/container` package is open-sourced software licensed under the [MIT license](LICENSE.md).
+The `sepiphy/container` project is open-sourced software licensed under the [MIT license](LICENSE.md).
