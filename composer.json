@@ -19,7 +19,8 @@
     ],
     "require": {
         "php": "^7.1.3",
-        "sepiphy/contracts": "dev-master"
+        "sepiphy/contracts": "dev-master",
+        "symfony/dependency-injection": "^4.2"
     },
     "autoload": {
         "psr-4": {
