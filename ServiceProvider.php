@@ -58,6 +58,6 @@ abstract class ServiceProvider
     {
         $this->container = $container;
 
-        return self;
+        return $this;
     }
 }
