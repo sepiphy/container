@@ -1,9 +1,17 @@
-## About
+![CircleCI (all branches)](https://img.shields.io/circleci/project/github/sepiphy/phptools.svg)
+![Packagist](https://img.shields.io/packagist/dt/sepiphy/container.svg)
+![Packagist Version](https://img.shields.io/packagist/v/sepiphy/container.svg?label=version)
+![GitHub](https://img.shields.io/github/license/sepiphy/container.svg)
 
-The `sepiphy/container` project is a component of `sepiphy/phptools` project.
+A set of PHP tools inspired by Symfony Framework.
 
-Please visit [sepiphy/phptools](../../README.md) for more information and documentation!
+## Usage
 
+Please read the [documentation](../../docs/docs.md).
+
+## Contributing
+
+Please read the [contribution guide](https://seriquynh.com/oss/contributing?github=sepiphy/container) for more information.
 ## License
 
-The `sepiphy/container` project is open-sourced software licensed under the [MIT license](LICENSE.md).
+Please read the [MIT License](LICENSE.md) for more information.
