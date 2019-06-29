@@ -59,8 +59,6 @@ class Container implements ContainerInterface
             'shared' => false,
             'callback' => $callback,
         ];
-
-        return $this;
     }
 
     /**
@@ -72,8 +70,6 @@ class Container implements ContainerInterface
             'shared' => true,
             'callback' => $callback,
         ];
-
-        return $this;
     }
 
     /**
@@ -82,8 +78,6 @@ class Container implements ContainerInterface
     public function set(string $id, $value)
     {
         $this->instances[$id] = $value;
-
-        return $this;
     }
 
     /**
