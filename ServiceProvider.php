@@ -11,16 +11,16 @@
 
 namespace Sepiphy\PHPTools\Container;
 
-use Sepiphy\PHPTools\Contracts\Container\ContainerContract;
+use Sepiphy\PHPTools\Contracts\Container\ContainerInterface;
 
 abstract class ServiceProvider
 {
     /**
-     * @var ContainerContract
+     * @var ContainerInterface
      */
     protected $container;
 
-    public function __construct(ContainerContract $container)
+    public function __construct(ContainerInterface $container)
     {
         $this->container = $container;
     }
@@ -35,12 +35,12 @@ abstract class ServiceProvider
         //
     }
 
-    public function getContainer(): ContainerContract
+    public function getContainer(): ContainerInterface
     {
         return $this->container;
     }
 
-    public function setContainer(ContainerContract $container): self
+    public function setContainer(ContainerInterface $container): self
     {
         $this->container = $container;
 

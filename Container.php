@@ -12,10 +12,10 @@
 namespace Sepiphy\PHPTools\Container;
 
 use Closure;
-use Sepiphy\PHPTools\Contracts\Container\ContainerContract;
+use Sepiphy\PHPTools\Contracts\Container\ContainerInterface;
 use Sepiphy\PHPTools\Container\Exceptions\NotFoundException;
 
-class Container implements ContainerContract
+class Container implements ContainerInterface
 {
     /**
      * @var array
