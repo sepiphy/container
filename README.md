@@ -4,3 +4,5 @@
 ![GitHub](https://img.shields.io/github/license/sepiphy/container.svg)
 
 The `sepiphy/container` package
+
+Check the [sepiphy/phptools](https://github.com/sepiphy/phptools) for more details.
