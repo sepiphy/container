@@ -22,7 +22,7 @@ class Container extends ContainerBuilder implements ContainerInterface
     /**
      * {@inheritdoc}
      */
-    public function useFile(string $filePath): void
+    public function use(string $filePath): void
     {
         if (is_file($filePath)) {
             $container = $this;
