@@ -13,34 +13,66 @@ namespace Sepiphy\PHPTools\Container;
 
 use Sepiphy\PHPTools\Contracts\Container\ContainerInterface;
 
+/**
+ * @author Quynh Xuan Nguyen <seriquynh@gmail.com>
+ */
 abstract class ServiceProvider
 {
     /**
+     * The ContainerInterface implementation.
+     *
      * @var ContainerInterface
      */
     protected $container;
 
+    /**
+     * Create a new ServiceProvider instance.
+     *
+     * @param ContainerInterface $container
+     * @return void
+     */
     public function __construct(ContainerInterface $container)
     {
         $this->container = $container;
     }
 
+    /**
+     * Register application services.
+     *
+     * @return void
+     */
     public function register(): void
     {
         //
     }
 
+    /**
+     * Boot the application services.
+     *
+     * @return void
+     */
     public function boot(): void
     {
         //
     }
 
+    /**
+     * Get the ContainerInterface implementation.
+     *
+     * @return ContainerInterface
+     */
     public function getContainer(): ContainerInterface
     {
         return $this->container;
     }
 
-    public function setContainer(ContainerInterface $container): self
+    /**
+     * Set the ContainerInterface implementation.
+     *
+     * @param ContainerInterface $container
+     * @return $this
+     */
+    public function setContainer(ContainerInterface $container)
     {
         $this->container = $container;
 
