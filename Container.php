@@ -14,8 +14,8 @@ namespace Sepiphy\PHPTools\Container;
 use Closure;
 use ReflectionFunction;
 use ReflectionMethod;
-use Sepiphy\PHPTools\Contracts\Container\ContainerInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Sepiphy\PHPTools\Contracts\Container\ContainerInterface;
 
 /**
  * @author Quynh Xuan Nguyen <seriquynh@gmail.com>
@@ -98,6 +98,23 @@ class Container extends ContainerBuilder implements ContainerInterface
             }
 
             return $reflector->invokeArgs($results);
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function configure(array $providers): void
+    {
+        $instances = [];
+
+        foreach ($providers as $provider) {
+            $instances[$provider] = $instance = new $provider($this);
+            $instance->register();
+        }
+
+        foreach ($instances as $instance) {
+            $instance->boot();
         }
     }
 }
