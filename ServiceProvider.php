@@ -38,6 +38,22 @@ abstract class ServiceProvider implements ServiceProviderInterface
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public function register(): void
+    {
+        //
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function boot(): void
+    {
+        //
+    }
+
+    /**
      * Get the ContainerInterface implementation.
      *
      * @return ContainerInterface
