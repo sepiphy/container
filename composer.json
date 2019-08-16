@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Sepiphy\\PHPTools\\Container\\": "./"
+            "Sepiphy\\Container\\": "./"
         }
     },
     "extra": {

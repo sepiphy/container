@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace Sepiphy\PHPTools\Container;
+namespace Sepiphy\Container;
 
 use Closure;
 use ReflectionFunction;
 use ReflectionMethod;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Sepiphy\PHPTools\Contracts\Container\ContainerInterface;
+use Sepiphy\Contracts\Container\ContainerInterface;
 
 /**
  * @author Quynh Xuan Nguyen <seriquynh@gmail.com>

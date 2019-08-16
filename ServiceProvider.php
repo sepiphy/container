@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Sepiphy\PHPTools\Container;
+namespace Sepiphy\Container;
 
-use Sepiphy\PHPTools\Contracts\Container\ContainerInterface;
-use Sepiphy\PHPTools\Contracts\Container\ServiceProviderInterface;
+use Sepiphy\Contracts\Container\ContainerInterface;
+use Sepiphy\Contracts\Container\ServiceProviderInterface;
 
 /**
  * @author Quynh Xuan Nguyen <seriquynh@gmail.com>
