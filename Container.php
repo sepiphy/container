@@ -36,7 +36,11 @@ class Container extends ContainerBuilder implements ContainerInterface
     {
         $service = parent::get($id, $invalidBehavior);
 
-        if ($service instanceof Closure && ! in_array($id, $this->resolvedIds)) {
+        if (in_array($id, $this->resolvedIds)) {
+            return $service;
+        }
+
+        if ($service instanceof Closure) {
             $this->set($id, $instance = $service($this));
 
             $this->resolvedIds[] = $id;
@@ -45,60 +49,6 @@ class Container extends ContainerBuilder implements ContainerInterface
         }
 
         return $service;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function use(string $filePath): void
-    {
-        if (is_file($filePath)) {
-            $container = $this;
-
-            require $filePath;
-        }
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function call($callback)
-    {
-        if (is_string($callback) && strpos($callback, '@') > 0) {
-            $callback = explode('@', $callback);
-        }
-
-        if (is_array($callback) && is_callable($callback)) {
-            $class = $this->get($callback[0]);
-            $method = $callback[1];
-            [$class, $method] = $callback;
-
-            $reflector = new ReflectionMethod($class, $method);
-
-            $params = $reflector->getParameters();
-
-            $results = [];
-
-            foreach ($params as $param) {
-                if ($param->getClass()) {
-                    $results[] = $this->get($param->getClass()->getName());
-                }
-            }
-
-            return $reflector->invokeArgs($this->get($class), $results);
-        } else {
-            $reflector = new ReflectionFunction($callback);
-
-            $params = $reflector->getParameters();
-
-            $results = [];
-
-            foreach ($params as $param) {
-                $results[] = $this->get($param->getClass()->getName());
-            }
-
-            return $reflector->invokeArgs($results);
-        }
     }
 
     /**
