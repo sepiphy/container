@@ -12,8 +12,6 @@
 namespace Sepiphy\Container;
 
 use Closure;
-use ReflectionFunction;
-use ReflectionMethod;
 use Sepiphy\Contracts\Container\ContainerInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
