@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 /*
- * This file is part of the Sepiphy package.
+ * This file is part of the sepiphy/phptools package.
  *
  * (c) Quynh Xuan Nguyen <seriquynh@gmail.com>
  *
@@ -14,8 +14,8 @@ namespace Sepiphy\Container;
 use Closure;
 use ReflectionFunction;
 use ReflectionMethod;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Sepiphy\Contracts\Container\ContainerInterface;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 /**
  * @author Quynh Xuan Nguyen <seriquynh@gmail.com>
